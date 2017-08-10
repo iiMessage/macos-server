@@ -76,6 +76,4 @@ local.properties
 obj/
 
 # Gradle
-gradle/
-gradlew*
 jars
