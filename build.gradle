@@ -1,0 +1,33 @@
+plugins {
+    id "com.github.johnrengelman.shadow" version "1.2.4"
+}
+apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName = 'MacOSServer'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.json:json:20160212'
+    compile 'org.xerial:sqlite-jdbc:3.8.11.2'
+    compile 'commons-codec:commons-codec:1.10'
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+jar {
+    baseName = 'macos_server'
+    version = '0.1.0'
+}
+
+sourceSets {
+    main {
+        java {
+            srcDir 'src'
+        }
+    }
+}
